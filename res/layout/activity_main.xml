@@ -1,0 +1,128 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000" >
+
+    <cn.com.fastweb.fastmedia.demo.VideoTextureView
+        android:id="@+id/main_video_texture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <ScrollView
+        android:id="@+id/stats_tx_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="40dp"
+        android:maxWidth="300dp" >
+
+        <TextView
+            android:id="@+id/stats_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#60000000"
+            android:padding="2dp"
+            android:textColor="#fff"
+            android:textSize="10sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/media_controller_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#80000000"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/start_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_media_play" />
+
+        <TextView
+            android:id="@+id/time_tx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:padding="5dp"
+            android:text="00:00"
+            android:textColor="#fff" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/info_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:padding="5dp"
+                android:src="@android:drawable/ic_menu_info_details" />
+
+            <ImageButton
+                android:id="@+id/resize_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:padding="5dp"
+                android:src="@drawable/scale" />
+
+            <ImageButton
+                android:id="@+id/fullscreen_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:padding="5dp"
+                android:src="@drawable/screen_orientation" />
+
+            <Button
+                android:id="@+id/mute_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:padding="5dp"
+                android:text="mute"
+                android:textColor="#fff"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                android:padding="5dp"
+                android:src="@drawable/close" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
