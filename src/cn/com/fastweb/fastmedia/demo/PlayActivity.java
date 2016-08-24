@@ -378,10 +378,10 @@ public class PlayActivity extends Activity implements SurfaceTextureListener,OnT
     }
     
     public String formatStatsInfo() {
-		return  "Duration(current - begin) (ms): " + (System.currentTimeMillis() - Stats.startTime)  +"\n"
+		return  "Duration(current - begin) (ms): " + player.getPlayDuration()  +"\n"
 				+ "Flv loaded: audio =" + Stats.currentLoadedAudioFlvTags + " video = " + Stats.currentLoadedVideoFlvTags  +"\n"
 				+ "Flv remained: aac =" + player.getAudioBufferedSize() + " h264 = " + player.getVideoBufferedSize()  +"\n"
-				+ "H264NalAllLoadNum = " + Stats.H264NalAllLoadNum + " invaild = " + Stats.H264NalAllLostNum  + "used = " + Stats.H264NalAllUsedNum +"\n"
+				+ "H264NalAllLoadNum = " + Stats.H264NalAllLoadNum + " invaild = " + Stats.H264NalAllInvaildNum  + "used = " + Stats.H264NalAllUsedNum +"\n"
 				+ "H264CurrentPictures_dropped = " + Stats.H264CurrentPictures_dropped + " all = " + Stats.H264CurrentPictures_all +"\n"
 				+ "Network AVG Rate(KB): media = " + Stats.getFormatMediaNetworkRate() + " audio = " + Stats.getFormatAudioNetworkRate() + " video = " + Stats.getFormatVideoNetworkRate() +"\n"
 				+ "Realtime Rate(KB) = " + Stats.formatSpeed() +"\n"
